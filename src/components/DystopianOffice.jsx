@@ -4,17 +4,43 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
+// Simple stick figure SVG component
+const StickFigure = ({ color = '#F5F0EB', opacity = 0.6, size = 16 }) => (
+  <svg
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke={color}
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    style={{ opacity }}
+  >
+    {/* Head */}
+    <circle cx="12" cy="5" r="3" />
+    {/* Body */}
+    <line x1="12" y1="8" x2="12" y2="16" />
+    {/* Arms */}
+    <line x1="12" y1="11" x2="8" y2="13" />
+    <line x1="12" y1="11" x2="16" y2="13" />
+    {/* Legs */}
+    <line x1="12" y1="16" x2="9" y2="21" />
+    <line x1="12" y1="16" x2="15" y2="21" />
+  </svg>
+);
+
 const floorData = [
-  { floor: 'G', label: 'CEO & Board', status: 'elite', desc: 'Marble lobbies. Coffee still hot.' },
-  { floor: '1', label: 'Senior Partners', status: 'elite', desc: 'Private suites. Nearest exits.' },
-  { floor: '2', label: 'Client Reception', status: 'elite', desc: 'The best light. The best air.' },
-  { floor: '3', label: 'Management', status: 'mid', desc: 'Comfortable. Respectable.' },
-  { floor: '4', label: 'Senior Staff', status: 'mid', desc: 'Acceptable. Functional.' },
-  { floor: '5', label: 'Junior Staff', status: 'low', desc: 'The climb begins to show.' },
-  { floor: '6', label: 'Analysts & Clerks', status: 'low', desc: 'Sweat in formalwear.' },
-  { floor: '7', label: 'Interns & Temps', status: 'low', desc: 'Arrive already exhausted.' },
-  { floor: '8', label: 'Call Centre', status: 'bottom', desc: 'Out of sight. Out of breath.' },
-  { floor: '9', label: 'Archives & Storage', status: 'bottom', desc: 'Where ambition goes to die.' },
+  { floor: '9', label: 'Archives & Storage', status: 'bottom', desc: 'Where ambition goes to die.', population: 18 },
+  { floor: '8', label: 'Call Centre', status: 'bottom', desc: 'Out of sight. Out of breath.', population: 16 },
+  { floor: '7', label: 'Interns & Temps', status: 'low', desc: 'Arrive already exhausted.', population: 14 },
+  { floor: '6', label: 'Analysts & Clerks', status: 'low', desc: 'Sweat in formalwear.', population: 12 },
+  { floor: '5', label: 'Junior Staff', status: 'low', desc: 'The climb begins to show.', population: 10 },
+  { floor: '4', label: 'Senior Staff', status: 'mid', desc: 'Acceptable. Functional.', population: 8 },
+  { floor: '3', label: 'Management', status: 'mid', desc: 'Comfortable. Respectable.', population: 6 },
+  { floor: '2', label: 'Client Reception', status: 'elite', desc: 'The best light. The best air.', population: 4 },
+  { floor: '1', label: 'Senior Partners', status: 'elite', desc: 'Private suites. Nearest exits.', population: 3 },
+  { floor: 'G', label: 'CEO & Board', status: 'elite', desc: 'Marble lobbies. Coffee still hot.', population: 2 },
 ];
 
 export default function DystopianOffice() {
@@ -54,6 +80,24 @@ export default function DystopianOffice() {
               scrollTrigger: { trigger: buildingRef.current, start: 'top 75%' },
             }
           );
+
+          // Animate stickmen within each floor with stagger
+          const stickmen = floor.querySelectorAll('.stickman');
+          if (stickmen.length > 0) {
+            gsap.fromTo(
+              stickmen,
+              { opacity: 0, scale: 0.5 },
+              {
+                opacity: 1,
+                scale: 1,
+                duration: 0.4,
+                delay: i * 0.08 + 0.3,
+                stagger: 0.01,
+                ease: 'back.out(1.2)',
+                scrollTrigger: { trigger: buildingRef.current, start: 'top 75%' },
+              }
+            );
+          }
         });
       }
     }, sectionRef);
@@ -81,6 +125,26 @@ export default function DystopianOffice() {
     }
   };
 
+  const getStickmanColor = (status) => {
+    switch (status) {
+      case 'elite': return '#D4943A'; // amber
+      case 'mid': return '#F5F0EB'; // cream
+      case 'low': return '#C45A3C'; // rust
+      case 'bottom': return '#DC2626'; // red
+      default: return '#F5F0EB';
+    }
+  };
+
+  const getStickmanOpacity = (status) => {
+    switch (status) {
+      case 'elite': return 0.8;
+      case 'mid': return 0.6;
+      case 'low': return 0.5;
+      case 'bottom': return 0.4;
+      default: return 0.6;
+    }
+  };
+
   return (
     <section ref={sectionRef} className="relative py-24 md:py-40 px-6">
       {/* Header */}
@@ -96,29 +160,53 @@ export default function DystopianOffice() {
       </div>
 
       <div className="max-w-5xl mx-auto grid lg:grid-cols-2 gap-12 lg:gap-16">
-        {/* The building visualization */}
-        <div ref={buildingRef} className="space-y-1">
-          {floorData.map((item, i) => (
-            <div
-              key={i}
-              className={`building-floor flex items-center gap-4 px-4 py-3 border ${getStatusColor(item.status)} transition-all duration-300`}
-            >
-              <span className={`font-mono text-sm font-bold w-6 ${getTextColor(item.status)}`}>
-                {item.floor}
-              </span>
-              <div className="flex-1">
-                <span className={`font-body text-sm font-medium ${getTextColor(item.status)}`}>
-                  {item.label}
-                </span>
+        {/* The building visualization - pyramid shape */}
+        <div ref={buildingRef} className="flex flex-col items-center gap-1.5 py-8">
+          {floorData.map((item, i) => {
+            const stickmanSize = 24;
+
+            return (
+              <div
+                key={i}
+                className="building-floor flex flex-col items-center"
+              >
+                {/* Floor bar with stickmen */}
+                <div
+                  className={`flex items-center gap-1 px-4 py-2 border ${getStatusColor(item.status)} transition-all duration-300`}
+                >
+                  {/* Floor label on left */}
+                  <div className="flex items-center gap-2 mr-3">
+                    <span className={`font-mono text-xs font-bold ${getTextColor(item.status)}`}>
+                      {item.floor}
+                    </span>
+                  </div>
+
+                  {/* Stickmen in single row */}
+                  <div className="flex items-center gap-1">
+                    {Array.from({ length: item.population }).map((_, stickIndex) => (
+                      <div key={stickIndex} className="stickman">
+                        <StickFigure
+                          color={getStickmanColor(item.status)}
+                          opacity={getStickmanOpacity(item.status)}
+                          size={stickmanSize}
+                        />
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Floor label below - shown on hover/desktop */}
+                <div className="mt-1 text-center hidden md:block">
+                  <span className={`font-body text-[10px] ${getTextColor(item.status)}`}>
+                    {item.label}
+                  </span>
+                </div>
               </div>
-              <span className="font-body text-xs text-cream/30 italic hidden md:block">
-                {item.desc}
-              </span>
-            </div>
-          ))}
+            );
+          })}
 
           {/* Legend */}
-          <div className="flex items-center gap-4 mt-4 pt-4">
+          <div className="flex items-center gap-4 mt-8 pt-4 border-t border-cream/5">
             <div className="flex items-center gap-1.5">
               <div className="w-2 h-2 bg-amber/50 rounded-full" />
               <span className="font-mono text-[10px] text-cream/30">Power</span>
@@ -128,7 +216,7 @@ export default function DystopianOffice() {
               <span className="font-mono text-[10px] text-cream/30">Labour</span>
             </div>
             <div className="flex items-center gap-1.5">
-              <div className="w-2 h-2 bg-red-900/50 rounded-full" />
+              <div className="w-2 h-2 bg-red-600/50 rounded-full" />
               <span className="font-mono text-[10px] text-cream/30">Forgotten</span>
             </div>
           </div>

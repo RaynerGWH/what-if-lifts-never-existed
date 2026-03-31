@@ -1,7 +1,9 @@
 {
   "permissions": {
     "allow": [
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nInitial commit: The World Without Lifts\n\nA scroll-driven narrative web experience exploring counterfactual history.\n\nFeatures:\n- Interactive elevator experiences with scroll-locking transitions\n- 3D cityscape morphing animation using Three.js\n- Smooth scroll with Lenis and GSAP animations\n- Light/dark theme transitions between real world and dystopian sections\n- Lazy-loaded sections for performance optimization\n- Immediate display for final sections after return journey\n\nTech stack:\n- React 18 + Vite\n- Tailwind CSS 3\n- GSAP + ScrollTrigger\n- React Three Fiber + Three.js\n- Lenis smooth scroll\n\nContent refinements:\n- Natural punctuation throughout narrative text\n- Consistent tone and coherent storytelling\nEOF\n)\")",
+      "Bash(npm run dev:*)"
     ],
     "deny": [],
     "ask": []

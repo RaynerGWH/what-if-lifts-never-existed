@@ -96,10 +96,10 @@ export default function CityMorphScene({ lenis }) {
   const hasTriggered = useRef(false);
   const timeoutRef = useRef(null);
 
-  // Scroll lock during ready + playing
+  // Scroll lock only during playing (not ready)
   useEffect(() => {
     if (!lenis?.current) return;
-    if (phase === 'ready' || phase === 'playing') {
+    if (phase === 'playing') {
       lenis.current.stop();
     } else if (phase === 'done') {
       lenis.current.start();
