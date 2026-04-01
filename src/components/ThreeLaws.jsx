@@ -97,7 +97,7 @@ export default function ThreeLaws() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-48 px-6">
+    <section ref={sectionRef} className="relative py-24 md:py-36 px-6">
       {/* Atmospheric glow */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-[200px] opacity-10"
@@ -109,7 +109,7 @@ export default function ThreeLaws() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-rust/50 mb-4">
           The Core Thesis
         </p>
-        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-cream/95 tracking-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-cream/95 tracking-tight">
           The Three Laws
         </h2>
         <p className="font-body text-lg text-cream/40 mt-4">
@@ -126,12 +126,12 @@ export default function ThreeLaws() {
             className={`flex items-start gap-6 md:gap-10 p-8 md:p-12 border ${law.borderColor} bg-cream/[0.01]`}
           >
             <div className="flex-shrink-0">
-              <span className={`law-number font-display text-5xl md:text-7xl font-bold ${law.color} opacity-80`}>
+              <span className={`law-number font-display text-4xl md:text-5xl font-bold ${law.color} opacity-80`}>
                 {law.number}
               </span>
             </div>
             <div>
-              <h3 className={`law-title font-display text-3xl md:text-4xl lg:text-5xl font-bold ${law.color} tracking-tight`}>
+              <h3 className={`law-title font-display text-2xl md:text-3xl lg:text-4xl font-bold ${law.color} tracking-tight`}>
                 {law.title}
               </h3>
               <p className="law-desc font-body text-base md:text-lg text-cream/50 leading-relaxed mt-4">
@@ -144,19 +144,19 @@ export default function ThreeLaws() {
 
       {/* Closing synthesis */}
       <div ref={closingRef} className="max-w-3xl mx-auto text-center mt-20 md:mt-32 relative z-10">
-        <p className="font-display text-xl md:text-3xl text-cream/70 leading-relaxed font-medium italic">
+        <p className="font-display text-xl md:text-2xl text-cream/70 leading-relaxed font-medium italic">
           The genius of this world is that its inequality would feel{' '}
           <span className="text-cream/90 not-italic font-bold">normal.</span>
         </p>
         <p className="font-body text-base md:text-lg text-cream/40 leading-relaxed mt-6">
-          People would stop seeing it as oppression and start seeing it as common sense.
+          People would stop seeing it as <strong className="text-cream/60 font-semibold">oppression</strong> and start seeing it as <strong className="text-cream/60 font-semibold">common sense</strong>.
           Of course the CEO should not waste time climbing. Of course premium shops should be downstairs.
           Of course junior employees can handle more stairs.
         </p>
-        <p className="font-display text-lg md:text-2xl text-rust/80 italic mt-8">
+        <p className="font-display text-base md:text-xl text-rust/80 italic mt-8">
           The absence of the lift would not merely preserve inconvenience.
           <br />
-          It would manufacture a whole ideology of deserved access.
+          It would manufacture a whole <strong className="text-rust font-bold not-italic">ideology of deserved access</strong>.
         </p>
       </div>
     </section>

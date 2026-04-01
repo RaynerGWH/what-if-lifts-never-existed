@@ -152,7 +152,7 @@ export default function DystopianOffice() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-rust/50 mb-4">
           The Office Tower
         </p>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-cream/90 tracking-tight leading-[1.1]">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-cream/90 tracking-tight leading-[1.1]">
           Status by <span className="italic text-rust">Descent,</span>
           <br />
           Not Ascent
@@ -226,8 +226,8 @@ export default function DystopianOffice() {
         <div className="space-y-8">
           <div className="reveal-block">
             <p className="font-body text-base md:text-lg text-cream/55 leading-relaxed">
-              In our world, the top floor signals prestige. In this world, that inverts entirely.
-              The most powerful people occupy the ground floor or just above it. This is not a stylistic choice.
+              In our world, the <strong className="text-cream/70 font-semibold">top floor</strong> signals prestige. In this world, that inverts entirely.
+              The most powerful people occupy the <strong className="text-cream/70 font-semibold">ground floor</strong> or just above it. This is not a stylistic choice.
             </p>
           </div>
 
@@ -239,9 +239,9 @@ export default function DystopianOffice() {
 
           <div className="reveal-block">
             <p className="font-body text-base md:text-lg text-cream/55 leading-relaxed">
-              The chief executive has an office off the lobby. Senior management are on the first
-              and second floors. The marble, the air, the best toilets, the nearest exits: all reserved
-              for those whose time and bodies matter most.
+              The chief executive has an office off the <strong className="text-cream/70 font-semibold">lobby</strong>. Senior management are on the <strong className="text-cream/70 font-semibold">first
+              and second floors</strong>. The marble, the air, the best toilets, the nearest exits: all reserved
+              for those whose <strong className="text-cream/70 font-semibold">time and bodies matter most</strong>.
             </p>
           </div>
 
@@ -249,18 +249,18 @@ export default function DystopianOffice() {
             <p className="font-body text-base md:text-lg text-cream/55 leading-relaxed">
               Promotion is not "climbing the corporate ladder." It is the opposite.
             </p>
-            <p className="font-display text-2xl md:text-3xl text-amber font-bold mt-4">
+            <p className="font-display text-xl md:text-2xl text-amber font-bold mt-4">
               You earn the right to come down.
             </p>
           </div>
 
           <div className="reveal-block border-l-2 border-rust/20 pl-6">
-            <p className="font-body text-base text-cream/45 leading-relaxed">
-              New hires arrive in polished shoes, still naive, and are told they are on the ninth floor.
-              That assignment is not administrative. It is social branding. Every morning they drag their
+            <p className="font-body text-base md:text-lg text-cream/45 leading-relaxed">
+              New hires arrive in polished shoes, still naive, and are told they are on the <strong className="text-cream/60 font-semibold">ninth floor</strong>.
+              That assignment is not administrative. It is <strong className="text-cream/60 font-semibold">social branding</strong>. Every morning they drag their
               bodies upward while executives glide in at street level with coffee still hot in their hands.
             </p>
-            <p className="font-body text-sm text-cream/30 mt-3 italic">
+            <p className="font-body text-sm md:text-base text-cream/30 mt-3 italic">
               The building itself teaches them their place.
             </p>
           </div>

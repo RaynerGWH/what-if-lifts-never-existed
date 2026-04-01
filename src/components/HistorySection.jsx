@@ -326,13 +326,13 @@ export default function HistorySection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-48 px-6 overflow-hidden">
+    <section ref={sectionRef} className="relative py-24 md:py-36 px-6 overflow-hidden">
       {/* Section Header */}
       <div ref={headerRef} className="max-w-3xl mx-auto text-center mb-24 md:mb-32">
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-steel mb-4">
           Chapter One
         </p>
-        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal tracking-tight">
           A Brief History of
           <br />
           <span className="italic">Going Up</span>
@@ -388,7 +388,7 @@ export default function HistorySection() {
                   <span className="font-mono text-sm text-rust font-medium tracking-wide">
                     {item.year}
                   </span>
-                  <h3 className="font-display text-2xl md:text-3xl font-semibold text-charcoal mt-2 mb-3">
+                  <h3 className="font-display text-xl md:text-2xl font-semibold text-charcoal mt-2 mb-3">
                     {item.title}
                   </h3>
                   <p className="font-body text-base md:text-lg text-charcoal/60 leading-relaxed">

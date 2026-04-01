@@ -39,14 +39,14 @@ export default function Disclaimer() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-steel mb-4">
           Back to Reality
         </p>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-charcoal tracking-tight">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-charcoal tracking-tight">
           Why This World
           <br />
           <span className="italic text-steel">Could Never Exist</span>
         </h2>
         <p className="font-body text-base md:text-lg text-charcoal/50 mt-6 max-w-xl mx-auto leading-relaxed">
-          The dystopia above is a thought experiment, not a plausible timeline.
-          Here is why the lift is one of the most inevitable inventions in human history.
+          The dystopia above is a <strong className="text-charcoal/70 font-semibold">thought experiment</strong>, not a plausible timeline.
+          Here is why the lift is one of the most <strong className="text-charcoal/70 font-semibold">inevitable inventions</strong> in human history.
         </p>
       </div>
 
@@ -58,7 +58,7 @@ export default function Disclaimer() {
             className="group p-6 md:p-8 border border-charcoal/8 hover:border-charcoal/15 transition-all duration-500"
           >
             <span className="font-mono text-xs text-steel/50 tracking-widest">{arg.number}</span>
-            <h3 className="font-display text-xl md:text-2xl font-semibold text-charcoal mt-2 mb-3">
+            <h3 className="font-display text-lg md:text-xl font-semibold text-charcoal mt-2 mb-3">
               {arg.title}
             </h3>
             <p className="font-body text-sm md:text-base text-charcoal/50 leading-relaxed">
@@ -71,11 +71,11 @@ export default function Disclaimer() {
       {/* Core thesis */}
       <div className="max-w-3xl mx-auto text-center mt-16 md:mt-24 relative z-10">
         <div className="inline-block px-8 py-6 border border-charcoal/10">
-          <p className="font-display text-lg md:text-xl text-charcoal/70 leading-relaxed italic">
+          <p className="font-display text-base md:text-lg text-charcoal/70 leading-relaxed italic">
             The lift is not a contingent invention that depends on a specific genius or cultural moment.
-            It is a near-inevitable mechanical consequence of tool-using beings living under gravity.
+            It is a <strong className="text-charcoal font-bold not-italic">near-inevitable mechanical consequence</strong> of tool-using beings living under gravity.
           </p>
-          <p className="font-body text-sm text-steel mt-4">
+          <p className="font-body text-sm md:text-base text-steel mt-4 font-semibold">
             No plausible timeline avoids it.
           </p>
         </div>

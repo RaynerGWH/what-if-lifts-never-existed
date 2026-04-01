@@ -90,7 +90,7 @@ export default function DystopianInequality() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-rust/50 mb-4">
           The Ripple Effects
         </p>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-cream/90 tracking-tight leading-[1.1]">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-cream/90 tracking-tight leading-[1.1]">
           Inequality Becomes
           <br />
           <span className="italic text-rust">Architecture</span>
@@ -109,12 +109,12 @@ export default function DystopianInequality() {
             </span>
 
             {/* Title */}
-            <h3 className="font-display text-2xl md:text-4xl font-bold text-cream/85 leading-tight mb-2">
+            <h3 className="font-display text-xl md:text-2xl font-bold text-cream/85 leading-tight mb-2">
               {topic.title}
             </h3>
 
             {topic.subtitle && (
-              <p className="font-display text-xl md:text-2xl text-rust/70 italic mb-6">
+              <p className="font-display text-base md:text-lg text-rust/70 italic mb-6">
                 {topic.subtitle}
               </p>
             )}
@@ -133,8 +133,8 @@ export default function DystopianInequality() {
               <div className="mt-8 space-y-3 pl-6 border-l border-cream/10">
                 {topic.quotes.map((q, i) => (
                   <div key={i} className="flex items-baseline gap-3">
-                    <span className="font-display text-lg text-cream/70 italic">{q.text}</span>
-                    <span className="font-body text-sm text-cream/30">{q.meaning}</span>
+                    <span className="font-display text-base md:text-lg text-cream/70 italic">{q.text}</span>
+                    <span className="font-body text-sm md:text-base text-cream/30">{q.meaning}</span>
                   </div>
                 ))}
               </div>

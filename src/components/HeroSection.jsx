@@ -61,17 +61,17 @@ export default function HeroSection() {
           </p>
         </div>
         <div className="overflow-hidden">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-charcoal leading-[0.9] tracking-tight">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-charcoal leading-[0.9] tracking-tight">
             The World
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold text-charcoal leading-[0.9] tracking-tight">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold text-charcoal leading-[0.9] tracking-tight">
             Without
           </h1>
         </div>
         <div className="overflow-hidden">
-          <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold italic leading-[0.9] tracking-tight gradient-text">
+          <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold italic leading-[0.9] tracking-tight gradient-text">
             Lifts
           </h1>
         </div>
@@ -79,9 +79,9 @@ export default function HeroSection() {
 
       <p
         ref={subtitleRef}
-        className="font-body text-lg md:text-xl text-charcoal/60 mt-8 max-w-md text-center leading-relaxed"
+        className="font-body text-base md:text-lg text-charcoal/60 mt-6 max-w-md text-center leading-relaxed"
       >
-        How a single invention shaped the cities we live in, the hierarchies we accept, and the world we take for granted.
+        How a single invention shaped the <strong className="text-charcoal/80 font-semibold">cities</strong> we live in, the <strong className="text-charcoal/80 font-semibold">hierarchies</strong> we accept, and the <strong className="text-charcoal/80 font-semibold">world</strong> we take for granted.
       </p>
 
       {/* Scroll indicator */}

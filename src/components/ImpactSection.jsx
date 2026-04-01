@@ -106,13 +106,13 @@ export default function ImpactSection() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative py-32 md:py-48 px-6">
+    <section ref={sectionRef} className="relative py-24 md:py-36 px-6">
       {/* Header */}
       <div ref={headerRef} className="max-w-3xl mx-auto text-center mb-20 md:mb-28">
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-steel mb-4">
           Chapter Two
         </p>
-        <h2 className="font-display text-4xl md:text-6xl lg:text-7xl font-bold text-charcoal tracking-tight">
+        <h2 className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal tracking-tight">
           What the Elevator
           <br />
           <span className="italic">Made Possible</span>
@@ -124,13 +124,13 @@ export default function ImpactSection() {
       <div ref={statsRef} className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 mb-24 md:mb-32">
         {impacts.map((item, i) => (
           <div key={i} className="stat-item text-center">
-            <span className="font-display text-4xl md:text-5xl lg:text-6xl font-bold gradient-text">
+            <span className="font-display text-3xl md:text-4xl lg:text-5xl font-bold gradient-text">
               {item.number}
             </span>
             <p className="font-body text-sm md:text-base font-semibold text-charcoal mt-2">
               {item.label}
             </p>
-            <p className="font-body text-xs md:text-sm text-charcoal/50 mt-1 leading-snug">
+            <p className="font-body text-sm md:text-base text-charcoal/50 mt-1 leading-snug">
               {item.detail}
             </p>
           </div>
@@ -150,10 +150,10 @@ export default function ImpactSection() {
             <span className="font-mono text-xs text-rust tracking-widest uppercase">
               0{i + 1}
             </span>
-            <h3 className="font-display text-2xl md:text-3xl font-semibold text-charcoal mt-3 mb-4">
+            <h3 className="font-display text-xl md:text-2xl font-semibold text-charcoal mt-3 mb-4">
               {item.title}
             </h3>
-            <p className="font-body text-base text-charcoal/60 leading-relaxed">
+            <p className="font-body text-base md:text-lg text-charcoal/60 leading-relaxed">
               {item.text}
             </p>
           </div>
@@ -162,7 +162,7 @@ export default function ImpactSection() {
 
       {/* Transition hint */}
       <div className="max-w-2xl mx-auto text-center mt-24 md:mt-32">
-        <p className="font-body text-lg md:text-xl text-charcoal/40 italic leading-relaxed">
+        <p className="font-body text-base md:text-lg text-charcoal/40 italic leading-relaxed">
           The elevator became so ordinary, so invisible, that we forgot what it gave us.
           <br />
           <span className="text-charcoal/60 font-medium">

@@ -261,7 +261,7 @@ export default function DystopianCity() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-rust/50 mb-4">
           The Sprawling City
         </p>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-cream/90 tracking-tight leading-[1.1]">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-cream/90 tracking-tight leading-[1.1]">
           Wide, Exhausting, and
           <br />
           <span className="italic text-rust">Unequal by Design</span>
@@ -302,12 +302,12 @@ export default function DystopianCity() {
           <div className="flex items-start gap-6">
             <div className="hidden md:block w-px h-32 bg-gradient-to-b from-amber/40 to-transparent flex-shrink-0 mt-2" />
             <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-cream/85 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-cream/85 mb-4">
                 The rich solve distance with proximity.
               </h3>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed mb-4">
-                They live near the commercial core, near government, near hospitals, near schools, near culture.
-                Their world is compact. Covered walkways, private courtyards, and chauffeur lanes eliminate friction
+                They live near the <strong className="text-cream/70 font-semibold">commercial core</strong>, near <strong className="text-cream/70 font-semibold">government</strong>, near <strong className="text-cream/70 font-semibold">hospitals</strong>, near <strong className="text-cream/70 font-semibold">schools</strong>, near <strong className="text-cream/70 font-semibold">culture</strong>.
+                Their world is <strong className="text-cream/70 font-semibold">compact</strong>. Covered walkways, private courtyards, and chauffeur lanes eliminate friction
                 through architecture.
               </p>
               {/* Rich world diagram */}
@@ -315,7 +315,7 @@ export default function DystopianCity() {
                 <RichWorldSVG />
               </div>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed">
-                A wealthy executive crosses the city in comfort. Parks close. Leaves for lunch.
+                A wealthy executive crosses the city in <strong className="text-cream/70 font-semibold">comfort</strong>. Parks close. Leaves for lunch.
                 Returns home without meaningful physical cost.
               </p>
             </div>
@@ -327,20 +327,20 @@ export default function DystopianCity() {
           <div className="flex items-start gap-6">
             <div className="hidden md:block w-px h-32 bg-gradient-to-b from-rust/40 to-transparent flex-shrink-0 mt-2" />
             <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-cream/85 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-cream/85 mb-4">
                 The poor live in the horizontal overflow.
               </h3>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed mb-4">
-                Pushed to the periphery where land is cheap but life is expensive in time.
-                A simple errand becomes a journey. Work is far. Services are far. Opportunity is far.
+                Pushed to the <strong className="text-cream/70 font-semibold">periphery</strong> where land is cheap but life is <strong className="text-cream/70 font-semibold">expensive in time</strong>.
+                A simple errand becomes a journey. Work is <strong className="text-cream/70 font-semibold">far</strong>. Services are <strong className="text-cream/70 font-semibold">far</strong>. Opportunity is <strong className="text-cream/70 font-semibold">far</strong>.
                 Every day begins earlier and ends later.
               </p>
               {/* Poor world diagram */}
               <div ref={poorWorldRef} className="flex justify-center my-8 opacity-0">
                 <PoorWorldSVG />
               </div>
-              <p className="font-body text-lg md:text-xl text-cream/70 leading-relaxed font-medium italic border-l-2 border-rust/30 pl-6">
-                In this world, poverty is measured not just in money but in kilometres and steps.
+              <p className="font-body text-base md:text-lg text-cream/70 leading-relaxed font-medium italic border-l-2 border-rust/30 pl-6">
+                In this world, <strong className="text-cream/85">poverty</strong> is measured not just in money but in <strong className="text-cream/85">kilometres</strong> and <strong className="text-cream/85">steps</strong>.
               </p>
             </div>
           </div>
@@ -351,11 +351,11 @@ export default function DystopianCity() {
           <div className="flex items-start gap-6">
             <div className="hidden md:block w-px h-32 bg-gradient-to-b from-steel/40 to-transparent flex-shrink-0 mt-2" />
             <div className="flex-1">
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-cream/85 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-cream/85 mb-4">
                 Cars become class weapons.
               </h3>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed mb-4">
-                When cities spread outward, whoever controls private transport controls time itself.
+                When cities spread outward, whoever controls <strong className="text-cream/70 font-semibold">private transport</strong> controls <strong className="text-cream/70 font-semibold">time itself</strong>.
                 The wealthy preserve energy and convert it into productivity, charm, social life, and ambition.
                 The poor burn energy merely to remain functional.
               </p>
@@ -373,8 +373,8 @@ export default function DystopianCity() {
                 </div>
               </div>
 
-              <p className="font-body text-lg md:text-xl text-cream/70 leading-relaxed font-medium italic border-l-2 border-rust/30 pl-6">
-                The poor do not just have less. They arrive at every opportunity already diminished.
+              <p className="font-body text-base md:text-lg text-cream/70 leading-relaxed font-medium italic border-l-2 border-rust/30 pl-6">
+                The poor do not just have less. They arrive at every opportunity <strong className="text-cream/85">already diminished</strong>.
               </p>
             </div>
           </div>
@@ -424,7 +424,7 @@ export default function DystopianCity() {
                 <span className="font-mono text-xs text-rust/50 tracking-widest">0{i + 1}</span>
               </div>
               <h4 className="font-display text-lg font-semibold text-cream/80 mb-3">{item.title}</h4>
-              <p className="font-body text-sm text-cream/40 leading-relaxed">{item.text}</p>
+              <p className="font-body text-sm md:text-base text-cream/40 leading-relaxed">{item.text}</p>
             </div>
           ))}
         </div>

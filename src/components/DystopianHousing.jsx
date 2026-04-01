@@ -35,7 +35,7 @@ export default function DystopianHousing() {
         <p className="font-mono text-xs tracking-[0.3em] uppercase text-rust/50 mb-4">
           Housing & Living
         </p>
-        <h2 className="font-display text-3xl md:text-5xl lg:text-6xl font-bold text-cream/90 tracking-tight leading-[1.1]">
+        <h2 className="font-display text-2xl md:text-3xl lg:text-4xl font-bold text-cream/90 tracking-tight leading-[1.1]">
           Ground Access as <span className="italic text-amber">Luxury,</span>
           <br />
           Upper Floors as <span className="italic text-rust">Desperation</span>
@@ -53,13 +53,13 @@ export default function DystopianHousing() {
               <div className="w-px h-20 bg-amber/20" />
             </div>
             <div>
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-cream/85 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-cream/85 mb-4">
                 The wealthy buy frictionlessness.
               </h3>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed">
-                In wealthy districts, homes spread laterally: townhouses, compounds, low-rise blocks,
+                In wealthy districts, homes spread <strong className="text-cream/70 font-semibold">laterally</strong>: townhouses, compounds, low-rise blocks,
                 sheltered drop-offs, internal courtyards, servant entrances, car access. The rich purchase
-                not only space but the complete absence of physical effort.
+                not only space but the <strong className="text-cream/70 font-semibold">complete absence of physical effort</strong>.
               </p>
             </div>
           </div>
@@ -75,16 +75,16 @@ export default function DystopianHousing() {
               <div className="w-px h-20 bg-rust/20" />
             </div>
             <div>
-              <h3 className="font-display text-2xl md:text-3xl font-semibold text-cream/85 mb-4">
+              <h3 className="font-display text-xl md:text-2xl font-semibold text-cream/85 mb-4">
                 The fifth-floor flat is not charming. It is punishing.
               </h3>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed mb-4">
-                Every bag of groceries is labour. Every child stroller is a burden.
-                Every old age is a trap.
+                Every bag of groceries is <strong className="text-cream/70 font-semibold">labour</strong>. Every child stroller is a <strong className="text-cream/70 font-semibold">burden</strong>.
+                Every old age is a <strong className="text-cream/70 font-semibold">trap</strong>.
               </p>
               <p className="font-body text-base md:text-lg text-cream/50 leading-relaxed">
-                The people who most need easy access (the elderly, disabled, sick, pregnant,
-                exhausted, overworked) are the very people least able to afford it.
+                The people who most need easy access (the <strong className="text-cream/70 font-semibold">elderly, disabled, sick, pregnant,
+                exhausted, overworked</strong>) are the very people <strong className="text-cream/70 font-semibold">least able to afford it</strong>.
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function DystopianHousing() {
 
         {/* Key quote */}
         <div className="reveal-block text-center py-12">
-          <p className="font-display text-2xl md:text-4xl text-cream/80 font-bold italic leading-snug max-w-2xl mx-auto">
+          <p className="font-display text-2xl md:text-3xl text-cream/80 font-bold italic leading-snug max-w-2xl mx-auto">
             Estate agents do not advertise penthouses.
             <br />
             <span className="text-amber">They advertise step-free privilege.</span>
@@ -113,7 +113,7 @@ export default function DystopianHousing() {
                 'Age with dignity and ease',
                 'Preserve energy for ambition',
               ].map((item, i) => (
-                <li key={i} className="font-body text-sm text-cream/50 flex items-start gap-2">
+                <li key={i} className="font-body text-sm md:text-base text-cream/50 flex items-start gap-2">
                   <span className="text-amber/50 mt-0.5">—</span>
                   {item}
                 </li>
@@ -133,7 +133,7 @@ export default function DystopianHousing() {
                 'Age becomes imprisonment',
                 'Burn energy just to remain functional',
               ].map((item, i) => (
-                <li key={i} className="font-body text-sm text-cream/50 flex items-start gap-2">
+                <li key={i} className="font-body text-sm md:text-base text-cream/50 flex items-start gap-2">
                   <span className="text-rust/50 mt-0.5">—</span>
                   {item}
                 </li>

@@ -13,7 +13,7 @@ export default function ClosingQuestion() {
       />
 
       <div className="relative z-10 text-center max-w-4xl mx-auto">
-        <p className="font-display text-4xl md:text-6xl lg:text-8xl font-bold text-charcoal tracking-tight leading-[1.1]">
+        <p className="font-display text-3xl md:text-4xl lg:text-5xl font-bold text-charcoal tracking-tight leading-[1.1]">
           What other invisible technologies
           <br />
           are quietly holding our world
@@ -24,9 +24,9 @@ export default function ClosingQuestion() {
 
       <div className="relative z-10 mt-12 text-center">
         <div className="section-divider mx-auto mb-8" />
-        <p className="font-body text-sm text-charcoal/60 max-w-md mx-auto leading-relaxed">
-          The lift did not just move people upward. It prevented society from turning height,
-          distance, and bodily effort into permanent instruments of class rule.
+        <p className="font-body text-sm md:text-base text-charcoal/60 max-w-md mx-auto leading-relaxed">
+          The lift did not just move people upward. It prevented society from turning <strong className="text-charcoal/80 font-semibold">height,
+          distance, and bodily effort</strong> into permanent instruments of class rule.
         </p>
       </div>
 
